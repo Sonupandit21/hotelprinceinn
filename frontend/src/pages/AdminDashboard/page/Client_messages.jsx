@@ -13,7 +13,7 @@ const Client_messages = () => {
   //   const fetchUsers = async () => {
   //     try {
   //       setLoading(true);
-  //       const res = await fetch("http://localhost:5000/api/bookings");
+  //       const res = await fetch("/api/bookings");
   //       if (!res.ok) {
   //         throw new Error("Failed to fetch bookings");
   //       }
@@ -35,7 +35,7 @@ const Client_messages = () => {
     const fetchUsers = async () => {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:5000/api/bookings");
+        const res = await fetch("/api/bookings");
         if (!res.ok) {
           throw new Error("Failed to fetch bookings");
         }

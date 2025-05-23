@@ -6,12 +6,12 @@ import {
 } from "react-icons/fa";
 
 import gallery1 from "../assets/gallery_img_1.jpg";
-import singleRoom from "../assets/room/SingleRoom.jpg";
+import single from "../assets/room/single.jpg";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const SingleRoom = () => {
-  const images = [gallery1, singleRoom, singleRoom, singleRoom];
+  const images = [gallery1, single, single, single];
   const [mainImage, setMainImage] = useState(images[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
 

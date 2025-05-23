@@ -7,7 +7,7 @@ const OrderHistory = () => {
   useEffect(() => {
     const fetchBooking = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/paymentbookings");
+        const response = await fetch("/api/paymentbookings");
         const data = await response.json();
 
         // If it's an array and you want to show the first order

@@ -100,7 +100,7 @@ const Navbar = () => {
   <Link to="/enquiry-now" className="hover:text-blue-700 transition" onClick={toggleSidebar}>Enquiry</Link>
 </nav>
 
-<div className="bg-[#d6e1ed] text-[#1b0c48] p-13 sm:p-16 text-xs sm:text-sm font-medium mt-auto">
+<div className="bg-[#d6e1ed] text-[#1b0c48] p-13 sm:p-16 text-xs sm:text-sm font-medium mt-auto h-full">
   <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:justify-between gap-6 text-center md:text-left">
     
     {/* Hotel Princeinn Noida */}
