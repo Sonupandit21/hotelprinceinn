@@ -4,23 +4,33 @@ import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
-  const exploreLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about-us' },
-    { name: 'Facilities', path: '/facilities' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact Us', path: '/contact-us' },
+const exploreLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about-us' },
+    { name: 'Facilities', href: '/facilities' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'Contact Us', href: '/contact-us' },
   ];
 
-  const contactInfo = [
+const contactInfo = [
     {
       icon: <MapPinIcon className="w-5 h-5" />,
-      text: `CCd 44 Ansal Golf Link 1 Greater Noida 201306\nPlot No-38C/1, Knowledge Park-2, Greater Noida 201310`
+      text: `Add-Cd 44 Ansal Golf Link 1 Greater Noida 201310\n Plot No-38C/1, Knowledge Park-2, Greater Noida 201310`
     },
-    { icon: <EnvelopeIcon className="w-5 h-5" />, text: 'reservations.dsyhotels@gmail.com' },
-    { icon: <PhoneIcon className="w-5 h-5" />, text: '+91 8136622279' },
-    { icon: <PhoneIcon className="w-5 h-5" />, text: '+91 9521415948' },
-  ];
+    
+     {
+      icon: <EnvelopeIcon className="w-5 h-5" />,
+      text: <a href="mailto:reservations.dsyhotels@gmail.com" className="hover:text-amber-500">reservations.dsyhotels@gmail.com</a>
+    },
+    {
+      icon: <PhoneIcon className="w-5 h-5" />,
+      text: <a href="tel:+918136622279" className="hover:text-amber-500">+91 8136622279</a>
+    },
+    {
+      icon: <PhoneIcon className="w-5 h-5" />,
+      text: <a href="tel:+919521415948" className="hover:text-amber-500">+91 9521415948</a>
+    }
+  ]
 
   return (
     <footer className="bg-gray-900 text-white py-10 px-4 sm:px-6 lg:px-8">
