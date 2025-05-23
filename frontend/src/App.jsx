@@ -27,10 +27,10 @@ import BestHotelinGreaterNoida from "./pages/BestHotelinGreaterNoida";
 import HoteNearKnowledgePark from "./pages/HoteNearKnowledgePark";
 import SingleRoom from "./pages/SingleRoom";
 import LuxuryRoom  from "./pages/LuxuryRoom";
-import BookingForm from "./pages/BookingForm";
+// import BookingForm from "./pages/BookingForm";
 import OrderHistory from "./pages/OrderHistory";
-import LuxuryFrom from "./pages/LuxuryFrom";
-import SingleFrom from "./pages/SingleFrom";
+// import LuxuryFrom from "./pages/LuxuryFrom";
+// import SingleFrom from "./pages/SingleFrom";
 
 // Admin Pages
 import Login from "./pages/AdminDashboard/Login";
@@ -71,10 +71,10 @@ const App = () => {
         <Route path="/Luxury-Room" element={<LuxuryRoom/>}/>
         <Route path="/signin" element={<SigninPage />} />
 
-        <Route path="/booking-form" element={<BookingForm />} />
+{/*         <Route path="/booking-form" element={<BookingForm />} /> */}
         <Route path="/Order-History" element={<OrderHistory/>}/>
-        <Route path="/LuxuryFrom" element={<LuxuryFrom/>}/>
-        <Route path="/SingleFrom"  element={<SingleFrom/>}/>
+{/*         <Route path="/LuxuryFrom" element={<LuxuryFrom/>}/> */}
+{/*         <Route path="/SingleFrom"  element={<SingleFrom/>}/> */}
       </Route>
 
       {/* 🔒 Admin Routes */}
