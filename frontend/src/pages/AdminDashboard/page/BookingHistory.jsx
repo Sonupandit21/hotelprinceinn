@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:5000/api/paymentbookings";
+const API_URL = "/api/paymentbookings";
 
 const BookingHistory = () => {
   const [orders, setOrders] = useState([]);

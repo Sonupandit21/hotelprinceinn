@@ -68,7 +68,7 @@
 
 //     try {
 //       // Create order on backend (amount in paise)
-//       const orderRes = await fetch("http://localhost:5000/api/payments/orders", {
+//       const orderRes = await fetch("/api/payments/orders", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify({ amount: amount * 100 }),
@@ -87,7 +87,7 @@
 //         handler: async (response) => {
 //           try {
 //             // Verify payment
-//             const verifyRes = await fetch("http://localhost:5000/api/payments/verify", {
+//             const verifyRes = await fetch("/api/payments/verify", {
 //               method: "POST",
 //               headers: { "Content-Type": "application/json" },
 //               body: JSON.stringify({
@@ -109,7 +109,7 @@
 //               totalAmount: amount,
 //             };
 
-//             const bookingRes = await fetch("http://localhost:5000/api/payments/bookings", {
+//             const bookingRes = await fetch("/api/payments/bookings", {
 //               method: "POST",
 //               headers: { "Content-Type": "application/json" },
 //               body: JSON.stringify(bookingPayload),

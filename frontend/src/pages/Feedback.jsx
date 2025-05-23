@@ -169,7 +169,7 @@ class Feedback extends Component {
 
   fetchTestimonials = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/feedback');
+      const response = await axios.get('/api/feedback');
       this.setState({ testimonials: response.data });
     } catch (error) {
       console.error('Failed to fetch testimonials:', error);

@@ -10,7 +10,7 @@ const EnquiryNow = () => {
     message: "",
   });
 
-  const API_BASE_URL = 'http://localhost:5000/api/bookings';
+  const API_BASE_URL = '/api/bookings';
   console.log("API_BASE_URL",API_BASE_URL)
 
 

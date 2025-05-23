@@ -9,7 +9,7 @@ const UserTable = () => {
 
   useEffect(() => {
     // Fetch users from API on component mount
-    fetch("http://localhost:5000/api/users/get-user")
+    fetch("/api/users/get-user")
       .then(async (res) => {
         if (!res.ok) {
           const errorData = await res.json();

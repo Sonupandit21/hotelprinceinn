@@ -37,7 +37,7 @@
 //     delete payload.paymentMethod; // remove redundant key
   
 //     try {
-//       const res = await fetch("http://localhost:5000/api/paymentbookings", {
+//       const res = await fetch("/api/paymentbookings", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",

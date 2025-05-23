@@ -48,8 +48,8 @@ class SigninPage extends Component {
 
     try {
       const url = isRegistering
-        ? "http://localhost:5000/api/users/register"
-        : "http://localhost:5000/api/auth/signin";
+        ? "/api/users/register"
+        : "/api/auth/signin";
 
       const payload = isRegistering
         ? { name, email, password, phone }
