@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Razorpay Payment Test</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <h2>Test Razorpay Payment</h2>
+  <button id="payButton">Pay Now</button>
+
+  <script>
+    async function startPayment() {
+      // Step 1: Create booking and get bookingId
+      const bookingRes = await fetch('http://localhost:5000/api/payments/bookings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          // your booking details here
+          firstName: "Sonuuuu",
+          lastName: "Doe",
+          phone: "9999999999",
+          email: "john@example.com",
+          checkIn: "2025-06-01",
+          checkOut: "2025-06-05",
+          adults: 2,
+          children: 1,
+          room: "Deluxe Suite",
+          country: "India",
+          city: "Mumbai",
+          address: "Street 123",
+          postcode: "400001",
+          state: "MH",
+          notes: "N/A",
+          payment_method: "razorpay",
+          total_price: 1
+        })
+      });
+      const bookingData = await bookingRes.json();
+      const bookingId = bookingData.booking._id;
+  
+      // Step 2: Create order from backend
+      const orderRes = await fetch('http://localhost:5000/api/payments/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ bookingId })
+      });
+      const orderData = await orderRes.json();
+  
+      const options = {
+        key: orderData.key,
+        amount: orderData.amount,
+        currency: orderData.currency,
+        name: "Hotel Booking",
+        description: "Room Payment",
+        order_id: orderData.orderId,
+        handler: async function (response) {
+          // Step 3: Send payment verification
+          await fetch("http://localhost:5000/api/payments/verify", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              orderId: response.razorpay_order_id,
+              paymentId: response.razorpay_payment_id,
+              signature: response.razorpay_signature
+            })
+          }).then(res => res.json())
+            .then(data => {
+              if (data.success) {
+                alert("Payment successful!");
+              } else {
+                alert("Verification failed.");
+              }
+            });
+        },
+        prefill: {
+          name: "John Doe",
+          email: "john@example.com",
+          contact: "9999999999"
+        },
+        theme: {
+          color: "#3399cc"
+        }
+      };
+  
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+  
+    document.getElementById('payButton').addEventListener('click', startPayment);
+  </script>
+  
+</body>
+</html>
