@@ -71,10 +71,10 @@ const App = () => {
         <Route path="/Luxury-Room" element={<LuxuryRoom/>}/>
         <Route path="/signin" element={<SigninPage />} />
 
-        <Route path="/booking-form" element={<BookingForm />} />
+        {/* <Route path="/booking-form" element={<BookingForm />} /> */}
         <Route path="/Order-History" element={<OrderHistory/>}/>
-        <Route path="/LuxuryFrom" element={<LuxuryFrom/>}/>
-        <Route path="/SingleFrom"  element={<SingleFrom/>}/>
+        {/* <Route path="/LuxuryFrom" element={<LuxuryFrom/>}/>
+        <Route path="/SingleFrom"  element={<SingleFrom/>}/> */}
       </Route>
 
       {/* 🔒 Admin Routes */}
