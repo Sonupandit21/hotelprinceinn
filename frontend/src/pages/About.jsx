@@ -1,6 +1,6 @@
 import React from 'react';
 import gallery1 from '../assets/gallery_img_1.jpg';
-import gallery3 from '../assets/gallery_img_7.jpg';
+import about from "../assets/about/about.jpg";
 
 const AboutUsHeader = () => {
   return (
@@ -25,7 +25,7 @@ const AboutUsHeader = () => {
       <div className="flex flex-col md:flex-row gap-8 items-start">
         {/* Image */}
         <div className="md:w-1/2">
-          <img src={gallery3} alt="Room" className="rounded shadow-md" />
+          <img src={about} alt="Room" className="rounded shadow-md" />
         </div>
 
         {/* Text */}
@@ -35,11 +35,12 @@ const AboutUsHeader = () => {
           Welcome to Hotel Prince Inn Greater Noida by DSY Hospitality, your trusted 3-star hotel in Greater Noida, where exceptional service meets unforgettable experiences. With a portfolio of 20+ hotels across India, we specialize in mid-segment and boutique properties designed for comfort, style, and personalized hospitality.
           </p>
           <p className="text-gray-700">
-          Hotel Prince Inn is known as a couple-friendly hotel in Greater Noida, offering a safe, discreet, and welcoming atmosphere for all our guests. If you're looking for a business hotel in Greater Noida, our facilities are tailored to meet the needs of working professionals, with high-speed Wi-Fi, meeting spaces, and flexible check-in options.
+          Hotel Prince Inn is known as a couple-friendly hotel in Greater Noida, offering a safe, discreet, and welcoming Strategically located near major educational institutions like Sharda University, Galgotias University, and Bennett University, we are recognized as a family-friendly hotel in Greater Noida, as well as a couple-friendly hotel near Sharda University. Our serene and secure environment makes us a safe hotel for couples in Ansal Golf Link and a preferred couple hotel near Galgotias University.
           </p>
           <p className="text-gray-700">
-          Prince Inn is a preferred choice for guests searching for a hotel near Knowledge Park 2 and Ansal Golf Link, or those visiting renowned institutions like Sharda University, Galgotias University, Bennett University, and Gautam Buddha University. Our strategic location makes us ideal for families, students, and business travelers alike.
+          For business travelers, we are an ideal business-friendly hotel in Knowledge Park 2 and India Expo Mart, offering high-speed Wi-Fi, meeting facilities, and a professional setting to stay productive. Whether you need a budget stay hotel near India Expo Mart or a fully equipped event & conference hotel in Greater Noida, Hotel Prince Inn ensures a seamless experience.
           </p>
+          <p className="text-gray-700">At Hotel Prince Inn, our mission is to deliver excellent service, clean and cozy accommodations, and a memorable stay – all within your budget.</p>
 
                  </div>
       </div>
